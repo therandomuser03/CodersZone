@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Calculator in C</title>
+</head>
+<body>
+    <header>
+            <center>
+                <a href = "/index.html"><img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px"></a>
+            </center>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+            <h1 align="center">Calculator</h1>
+        <div class="explaination">
+            Menu-driven program in C is a type of program in which various options are provided to the user and some functionality is provided based on these options. These programs are used to provide a simple yet effective user interface and deliver the requested functionalities to the user. This article provides an overview of menu-driven programs in C.
+           <br> 
+           <br>This code is an example of a menu driven calculator program, with operations like:  
+           <br>
+           <br>Addition
+           <br>Subtraction
+           <br>Multiplication
+           <br>Division
+           <br>Exponent
+           <br>Root
+         </div>
+        </div>
+        <h2>Algorithm</h2>
+        <div class="algorithm">
+            <ol type="1.">
+                <li>The driver program contains switch case that lets us choose an operation</li>
+                <li>The addition function adds Two numbers</li>
+                <li>the subtraction function finds the difference of two numbers</li>
+                <li>the multiplication function does the product</li>
+                <li>The division function gives the quotient</li>
+                <li>Exponent function gives the power of a number</li>
+                <li>root finds the root to the power of any number</li>
+            </ol>
+        </div>
+
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+
+        <div class="code">
+            <button class="save_button">  Save  </button>
+            <pre>
+    #include <stdio.h>  
+    #include <math.h>  
+    #include <stdlib.h>  
+                    
+    int main(){  
+        // declaration of local variable op;  
+        int op, n1, n2;  
+        float res;  
+        char ch;  
+
+        do{  
+            // displays the multiple operations of the C Calculator  
+
+            printf (" Select an operation to perform the calculation in C Calculator: ");  
+            printf (" \n 1 Addition  \t \t 2 Subtraction \n 3 Multiplication \t 4 Division \n 5 Square \t \t 6 Square Root \n 7 Exit \n \n Please, Make a choice ");      
+                           
+            scanf ("%d", &op);                                            // accepts a numeric input to choose the operation  
+                       
+            // use switch statement to call an operation  
+            switch (op){  
+                case 1:  
+                    // Add two numbers
+
+                    printf (" You chose: Addition");  
+                    printf ("\n Enter First Number: ");  
+                    scanf (" %d", &n1);  
+                    printf (" Enter Second Number: ");  
+                    scanf (" %d", &n2);  
+
+                    res = n1 + n2;                                        // Add two numbers  
+
+                    printf (" Addition of two numbers is: %.2f", res);  
+                    break;                                               // break the function  
+                    
+                case 2:  
+                    // Subtract two numbers  
+
+                    printf (" You chose: Subtraction");  
+                    printf ("\n Enter First Number: ");  
+                    scanf (" %d", &n1);  
+                    printf (" Enter Second Number: ");  
+                    scanf (" %d", &n2);  
+
+                    res = n1 - n2;                                       // subtract two numbers  
+                    printf (" Subtraction of two numbers is: %.2f", res);  
+                    break;                                              // break the function  
+                                  
+                case 3:  
+                    // Multiplication of the numbers 
+
+                    printf (" You chose: Multiplication");  
+                    printf ("\n Enter First Number: ");  
+                    scanf (" %d", &n1);  
+                    printf (" Enter Second Number: ");  
+                    scanf (" %d", &n2);  
+
+                    res = n1 * n2;                                     // multiply two numbers  
+                    
+                    printf (" Multiplication of two numbers is: %.2f", res);  
+                    break;                                            // break the function  
+                                  
+                case 4:  
+                    // Division of the numbers  
+
+                    printf (" You chose: Division");  
+                    printf ("\n Enter First Number: ");  
+                    scanf (" %d", &n1);  
+                    printf (" Enter Second Number: ");  
+                    scanf (" %d", &n2); 
+
+                    if (n2 == 0){  
+                        printf (" \n Divisor cannot be zero. Please enter another value ");  
+                    	scanf ("%d", &n2);        
+                    }  
+
+                    res = n1 / n2;                                    // divide two numbers  
+                    printf (" Division of two numbers is: %.2f", res);  
+                    break;                                            // break the function  
+                                 
+                case 5:  
+                    // getting square of a number 
+
+                    printf (" You chose: Square");  
+                    printf ("\n Enter First Number: ");  
+                    scanf (" %d", &n1);  
+                      
+                    res = n1 * n1;                                   // get square of a number  
+                    
+                    printf (" Square of %d number is: %.2f", n1, res);  
+                    break;                                           // break the function  
+                              
+                case 6:  
+                    // getting the square root of the number 
+
+                    printf (" You chose: Square Root");  
+                    printf ("\n Enter First Number: ");  
+                    scanf (" %d", &n1);  
+                                  
+                    res = sqrt(n1);                                  // use sqrt() function to find the Square Root   
+                    printf (" Square Root of %d numbers is: %.2f", n1, res);  
+                    break;                                          // break the function  
+                    	              
+                case 7:  
+
+                    printf (" You chose: Exit");  
+                    exit(0);   
+                    break;                                          // break the function  
+                        
+                default:  
+                    printf(" Something is wrong!! ");  
+                    break;                        
+            }  
+            printf (" \n \n ********************************************** \n ");  
+        } while (op != 7);  
+                  
+        return 0;        
+    } 
+                    
+            </pre>
+            <button class="download_button"><i class="fa fa-download"></i> Download</button>
+        </div>
+
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+    <pre>
+    Select an operation to perform the calculation in C Calculator:  
+    1 Addition              2 Subtraction 
+    3 Multiplication        4 Division 
+    5 Square                6 Square Root 
+    7 Exit 
+    
+    Please, Make a choice 1
+    You chose: Addition
+    Enter First Number: 4
+    Enter Second Number: 6
+    Addition of two numbers is: 10.00 
+    
+    ********************************************** 
+     Select an operation to perform the calculation in C Calculator:  
+    1 Addition              2 Subtraction 
+    3 Multiplication        4 Division 
+    5 Square                6 Square Root 
+    7 Exit 
+    
+    Please, Make a choice 2
+    You chose: Subtraction
+    Enter First Number: 5
+    Enter Second Number: 8
+    Subtraction of two numbers is: -3.00 
+    
+    ********************************************** 
+     Select an operation to perform the calculation in C Calculator:  
+    1 Addition              2 Subtraction 
+    3 Multiplication        4 Division 
+    5 Square                6 Square Root 
+    7 Exit 
+    
+    Please, Make a choice 3
+    You chose: Multiplication
+    Enter First Number: 8
+    Enter Second Number: 2
+    Multiplication of two numbers is: 16.00 
+    
+    ********************************************** 
+     Select an operation to perform the calculation in C Calculator:  
+    1 Addition              2 Subtraction 
+    3 Multiplication        4 Division 
+    5 Square                6 Square Root 
+    7 Exit 
+    
+    Please, Make a choice 4
+    You chose: Division
+    Enter First Number: 8
+    Enter Second Number: 2
+    Division of two numbers is: 4.00 
+    
+    ********************************************** 
+     Select an operation to perform the calculation in C Calculator:  
+    1 Addition              2 Subtraction 
+    3 Multiplication        4 Division 
+    5 Square                6 Square Root 
+    7 Exit 
+    
+    Please, Make a choice 5
+    You chose: Square
+    Enter First Number: 5
+    Square of 5 number is: 25.00 
+    
+    ********************************************** 
+     Select an operation to perform the calculation in C Calculator:  
+    1 Addition              2 Subtraction 
+    3 Multiplication        4 Division 
+    5 Square                6 Square Root 
+    7 Exit 
+    
+    Please, Make a choice 6
+    You chose: Square Root
+    Enter First Number: 8
+    Square Root of 8 numbers is: 2.83 
+    
+    ********************************************** 
+     Select an operation to perform the calculation in C Calculator:  
+    1 Addition              2 Subtraction 
+    3 Multiplication        4 Division 
+    5 Square                6 Square Root 
+    7 Exit 
+    
+    Please, Make a choice 9
+    Something is wrong!!  
+    
+    ********************************************** 
+     Select an operation to perform the calculation in C Calculator:  
+    1 Addition              2 Subtraction 
+    3 Multiplication        4 Division 
+    5 Square                6 Square Root 
+    7 Exit 
+    
+    Please, Make a choice 7
+    You chose: Exit
+    </pre>
+
+        </div>
+        <a class="button" href = "/java/calculator_java.html" target="_main">See the same program in Java</a>
+        <a class="button" href = "/python/calculator_py.html" target="_main">See the same program in Python</a>
+    </main>
+</body>
+</html>

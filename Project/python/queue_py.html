@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Queue Implementation in Python</title>
+</head>
+<body>
+    <header>
+            <center>
+                <a href = "/index.html"><img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px"></a>
+            </center>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+            <h1 align="center">Queue Implementation in Python</h1>
+        <div class="explaination">
+            Queue is a linear data structure that stores items in First In First Out (FIFO) manner. 
+            With a queue the least recently added item is removed first. 
+            A good example of queue is any queue of consumers for a resource where the consumer that came first is served first. 
+        <br>Operations associated with queue are:
+        <ol type="1.">
+            <li>Enqueue: Adds an item to the queue. 
+                If the queue is full, then it is said to be an Overflow condition.
+                Time Complexity : O(1)</li>
+            <li>Dequeue: Removes an item from the queue. 
+                The items are popped in the same order in which they are pushed. If the queue is empty, then it is said to be an Underflow condition –
+                 Time Complexity : O(1)</li>
+            <li>Front: Get the front item from queue – Time Complexity : O(1)</li>
+            <li>Rear: Get the last item from queue – Time Complexity : O(1)</li>
+         </div>
+        </div>
+
+        <h2>Algorithm</h2>
+        <div class="algorithm">
+            <ol type="A.">
+                <h3>Enqueue Operation Algorithm</h3>
+                <ol type="1.">
+                    <li>check if the queue is full</li>
+                    <li>for the first element, set the value of FRONT to 0</li>
+                    <li>increase the REAR index by 1</li>
+                    <li>add the new element in the position pointed to by REAR</li>
+                    <li>Returns success.</li>
+                </ol>
+                <h3>Dequeue Operation Algorithm</h3>
+                <ol type="1.">
+                    <li>check if the queue is empty</li>
+                    <li>return the value pointed by FRONT</li>
+                    <li>increase the FRONT index by 1</li>
+                    <li>for the last element, reset the values of FRONT and REAR to -1</li>
+                    <li>Returns success.</li>
+                </ol>
+            </ol>
+        </div>
+       
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+
+        <div class="code">
+            <button class="save_button">  Save  </button>
+            <pre>
+                # Python program to demonstrate queue implementation using list
+
+                # Initializing a queue
+                queue = []
+                
+                # Adding elements to the queue
+                queue.append('a')
+                queue.append('b')
+                queue.append('c')
+                
+                print("Initial queue")
+                print(queue)
+                
+                # Removing elements from the queue
+                print("\nElements dequeued from queue")
+                print(queue.pop(0))
+                print(queue.pop(0))
+                print(queue.pop(0))
+                
+                print("\nQueue after removing elements")
+                print(queue)
+                
+                # Uncommenting print(queue.pop(0))
+                # will raise and IndexError
+                # as the queue is now empty
+                
+            </pre>
+            <button class="download_button"><i class="fa fa-download"></i> Download</button>
+        </div>
+
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+            <pre>
+                <br>Initial queue
+                <br>['a', 'b', 'c']
+                
+                <br>Elements dequeued from queue
+                <br>a
+                <br>b
+                <br>c
+                
+                <br>Queue after removing elements
+                <br>[]
+                
+ </pre>
+
+        </div>
+        <a class="button" href = "/java/queue_java.html" target="_main">See the same program in Java</a>
+        <a class="button" href = "/c/queue_c.html" target="_main">See the same program in C</a>
+    </main>
+</body>
+</html>

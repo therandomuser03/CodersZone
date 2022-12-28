@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Queue in C</title>
+</head>
+<body>
+    <header>
+            <center>
+                <a href = "/index.html"><img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px"></a>
+            </center>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+            <h1 align="center">Queue</h1>
+        <div class="explaination">
+            A queue is a useful data structure in programming. It is similar to the ticket queue outside a cinema hall, where the first person entering the queue is the first person who gets the ticket.
+           <br><br> Queue follows the First In First Out (FIFO) rule - the item that goes in first is the item that comes out first.
+           <br><br>In programming terms, putting items in the queue is called enqueue, and removing items from the queue is called dequeue.
+           <br>A queue is an object (an abstract data structure - ADT) that allows the following operations:
+           <br><br>
+           <b>Enqueue</b>- Add an element to the end of the queue<br>
+           <b>Dequeue</b>- Remove an element from the front of the queue<br>
+           <b>IsEmpty</b>- Check if the queue is empty<br>
+           <b>IsFull</b>- Check if the queue is full<br>
+           <b>Peek</b>- Get the value of the front of the queue without removing it<br>
+         </div>
+        </div>
+        <h2>Algorithm</h2>
+        <div class="algorithm">
+            <ol type="A.">
+                <h3>Enqueue Operation Algorithm</h3>
+                <ol type="1.">
+                    <li>check if the queue is full</li>
+                    <li>for the first element, set the value of FRONT to 0</li>
+                    <li>increase the REAR index by 1</li>
+                    <li>add the new element in the position pointed to by REAR</li>
+                    <li>Returns success.</li>
+                </ol>
+                <h3>Dequeue Operation Algorithm</h3>
+                <ol type="1.">
+                    <li>check if the queue is empty</li>
+                    <li>return the value pointed by FRONT</li>
+                    <li>increase the FRONT index by 1</li>
+                    <li>for the last element, reset the values of FRONT and REAR to -1</li>
+                    <li>Returns success.</li>
+                </ol>
+            </ol>
+        </div>
+
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+
+        <div class="code">
+            <button class="save_button">  Save  </button>
+            <pre>
+    #include < stdio.h>
+    #define SIZE 5
+                    
+    void enQueue(int);
+    void deQueue();
+    void display();
+                    
+    int items[SIZE], front = -1, rear = -1;
+                    
+    int main() 
+        //deQueue is not possible on empty queue
+        deQueue();
+                    
+        //enQueue 5 elements
+        enQueue(1);
+        enQueue(2);
+        enQueue(3);
+        enQueue(4);
+        enQueue(5);
+                    
+        // 6th element can't be added to because the queue is full
+        enQueue(6);
+                    
+        display();
+                    
+        //deQueue removes element entered first i.e. 1
+        deQueue();
+                    
+        //Now we have just 4 elements
+        display();
+                    
+        return 0;
+    }
+    
+    //function to add an element
+    void enQueue(int value) {
+        if (rear == SIZE - 1)
+            printf("\nQueue is Full!!");
+        else {
+            if (front == -1)
+                front = 0;
+            rear++;
+            items[rear] = value;
+            printf("\nInserted -> %d", value);
+        }
+    }
+    
+    //Function to remove an element
+    void deQueue() {
+        if (front == -1)
+            printf("\nQueue is Empty!!");
+        else {
+            printf("\nDeleted : %d", items[front]);
+            front++;
+            if (front > rear)
+                front = rear = -1;
+        }
+    }
+                    
+    // Function to print the queue
+    void display() {
+        if (rear == -1)
+            printf("\nQueue is Empty!!!");
+        else {
+            int i;
+            printf("\nQueue elements are:\n");
+            for (i = front; i <= rear; i++)
+                printf("%d  ", items[i]);
+        }
+
+        printf("\n");
+    }
+                      
+            </pre>
+            <button class="download_button"><i class="fa fa-download"></i> Download</button>
+        </div>
+
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+            <pre>
+    Queue is Empty!!
+    Inserted -> 1
+    Inserted -> 2
+    Inserted -> 3
+    Inserted -> 4
+    Inserted -> 5
+    Queue is Full!!
+    Queue elements are:
+    1  2  3  4  5  
+                
+    Deleted : 1
+    Queue elements are:
+    2  3  4  5  
+ </pre>
+
+        </div>
+        <a class="button" href = "/java/queue_java.html" target="_main">See the same program in Java</a>
+        <a class="button" href = "/python/queue_py.html" target="_main">See the same program in Python</a>
+    </main>
+</body>
+</html>

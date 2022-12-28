@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Stack in C</title>
+</head>
+<body>
+    <header>
+            <center>
+                <a href = "/index.html"><img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px"></a>
+            </center>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+            <h1 align="center">Stack</h1>
+        <div class="explaination">
+            In C, a Stack is a linear data structure that follows the LIFO (Last In First Out) approach to perform a series of basic operations like push, pop, peek, and traverse. A Stack can be implemented using an Array or Linked List.
+           <br><br> A Stack is an abstract linear data structure serving as a collection of elements that are inserted (push operation) and removed (pop operation) according to the Last in First Out (LIFO) approach. Insertion and deletion happen on the same end (top) in a Stack. The top of the stack is returned using the peek operation.
+           <br><br>In C, the Stack data structure is an ordered, linear sequence of items. It is a LIFO (Last In First Out) data structure, which means that we can insert or remove an item at the top of the stack only. It is a sequential data type, unlike an array. In an array, we can access any of its elements using indexing, but we can only access the top most element in a stack. The name "Stack" for this data structure comes from the analogy to a set of physical items stacked on top of each other. An example of this data structure would be a stack of plates: We can only add a plate to the top of the stack and take a plate from the top of the stack. A stack of coins or a stack of books can also be a real-life example of the stack data structure.
+           <br><br>We use stack to perform its main two operations: Push and Pop, other operations being Peek, isEmpty and isFull.
+           <br>
+           <br>
+           <b>Push Operation</b>- We use the Push operation to add an element to the top of the stack.<br>
+           <b>Pop Operation</b>- We use the Pop operation to return and remove the topmost element of the stack.<br>
+           <b>Peek Operation</b>- We use the Peek Operation to display the topmost element of the stack.<br>
+           <b>IsEmpty Operation</b>- We use the IsEmpty Operation to check whether the stack is empty or not.<br>
+           <b>IsFull Operation</b>- We can use the IsFull Operation to check whether the stack is full or not.<br>
+         </div>
+        </div>
+        <h2>Algorithm</h2>
+        <div class="algorithm">
+            <ol type="A.">
+                <h3>Push Operation Algorithm</h3>
+                <ol type="1.">
+                    <li>Checks if the stack is full.</li>
+                    <li>If the stack is full, produces an error and exit.</li>
+                    <li>If the stack is not full, increments top to point next empty space.</li>
+                    <li>Adds data element to the stack location, where top is pointing.</li>
+                    <li>Returns success.</li>
+                </ol>
+                <h3>Pop Operation Algorithm</h3>
+                <ol type="1.">
+                    <li>Checks if the stack is empty.</li>
+                    <li>If the stack is empty, produces an error and exit.</li>
+                    <li>If the stack is not empty, accesses the data element at which top is pointing.</li>
+                    <li>Decreases the value of top by 1.</li>
+                    <li>Returns success.</li>
+                </ol>
+            </ol>
+        </div>
+
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+
+        <div class="code">
+            <button class="save_button">  Save  </button>
+            <pre>
+    #include < stdio.h>
+    #include <stdlib.h>
+                    
+    #define MAX 10
+                    
+    int count = 0;
+                    
+    // Creating a stack
+    struct stack {
+        int items[MAX];
+        int top;
+    };
+                    
+    typedef struct stack st;
+                    
+    void createEmptyStack(st *s) {
+        s->top = -1;
+    }
+                    
+    // Check if the stack is full
+    int isfull(st *s) {
+        if (s->top == MAX - 1)
+            return 1;
+        else
+            return 0;
+    }
+                    
+    // Check if the stack is empty
+    int isempty(st *s) {
+        if (s->top == -1)
+            return 1;
+        else
+            return 0;
+    }
+                    
+    // Add elements into stack
+    void push(st *s, int newitem) {
+        if (isfull(s)) {
+            printf("STACK FULL");
+        }
+        else {
+            s->top++;
+            s->items[s->top] = newitem;
+        }
+                    
+        count++;
+    }
+                    
+    // Remove element from stack
+    void pop(st *s) {
+        if (isempty(s)) {
+            printf("\n STACK EMPTY \n");
+        } 
+        else {
+            printf("Item popped= %d", s->items[s->top]);
+            s->top--;
+        }
+                      
+        count--;
+        printf("\n");
+    }
+                    
+    // Print elements of stack
+    void printStack(st *s) {
+        printf("Stack: ");
+
+        for (int i = 0; i < count; i++) {
+            printf("%d ", s->items[i]);
+        }
+                      
+        printf("\n");
+    }
+                    
+    // Driver code
+    int main() {
+        int ch;
+        st *s = (st *)malloc(sizeof(st));
+                    
+        createEmptyStack(s);
+                    
+        push(s, 1);
+        push(s, 2);
+        push(s, 3);
+        push(s, 4);
+                    
+        printStack(s);
+                    
+        pop(s);
+
+        printStack(s);
+    }
+                     
+            </pre>
+            <button class="download_button"><i class="fa fa-download"></i> Download</button>
+        </div>
+
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+            <pre>
+Stack: 1 2 3 4 
+Item popped= 4
+Stack: 1 2 3
+ </pre>
+
+        </div>
+        <a class="button" href = "/java/stack_java.html" target="_main">See the same program in Java</a>
+        <a class="button" href = "/python/stack_py.html" target="_main">See the same program in Python</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Palindrome Number in Python</title>
+</head>
+<body>
+    <header>
+            <center>
+                <a href = "/index.html"><img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px"></a>
+            </center>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+            <h1 align="center">Palindrome Number</h1>
+        <div class="explaination">
+            Palindrome number in java: A palindrome number is a number that is same after reverse.
+           <br> For example 545, 151, 34543, 343, 171, 48984 are the palindrome numbers. It can also be a string like LOL, MADAM etc.
+        </div>
+        </div>
+        <h2>Algorithm</h2>
+        <div class="algorithm">
+            <ol type="1.">
+                <li>Get the number to check for palindrome</li>
+                <li>Hold the number in temporary variable</li>
+                <li>Reverse the number</li>
+                <li>Compare the temporary number with reversed number</li>
+                <li>If both numbers are same, print "palindrome number"</li>
+                <li>Else print "not palindrome number"</li>
+            </ol>
+        </div>
+
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+
+        <div class="code">
+            <button class="save_button">  Save  </button>
+            <pre>
+    #include < stdio.h>
+                    
+    int main() {
+        int n, reversed = 0, remainder, original;
+        printf("Enter an integer: ");
+        scanf("%d", &n);
+        original = n;
+                    
+        // reversed integer is stored in reversed variable
+
+        while (n != 0) {
+            remainder = n % 10;
+            reversed = reversed * 10 + remainder;
+            n /= 10;
+        }
+                    
+        // palindrome if original and reversed are equal
+
+        if (original == reversed)
+            printf("%d is a palindrome.", original);
+        else
+            printf("%d is not a palindrome.", original);
+                    
+        return 0;
+    }
+                     
+            </pre>
+            <button class="download_button"><i class="fa fa-download"></i> Download</button>
+        </div>
+
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+            <pre>
+    Enter an integer: 121
+    121 is a palindrome.
+ </pre>
+
+        </div>
+        <a class="button" href = "/java/palindrome_java.html" target="_main">See the same program in Java</a>
+        <a class="button" href = "/python/palindrome_py.html" target="_main">See the same program in Python</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Menu driven program in java</title>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <center>
+                <a href = "/index.html">
+                    <img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px">
+                </a>
+            </center>
+        </div>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+        <div class="top">
+            <h3>Menu Driven Program</h3>
+        </div>
+        <div class="explaination">
+            Menu-driven program in Java is a type of program in which various options are provided to the user and some functionality is provided based on these options. These programs are used to provide a simple yet effective user interface and deliver the requested functionalities to the user. This article provides an overview of menu-driven programs in Java.
+           <br> 
+           <br>This code is an example of a menu driven program that calculates the area and perimeter of shapes like:  
+           <br>
+           <br>Square
+           <br>Rectangle
+           <br>Triangle
+           <br>Circle
+        </div>
+        <h2>Algorithm</h2>
+        <div class="algorithm">
+            <ol type="1.">
+                <li>The driver program contains switch case that lets us choose an operation</li>
+                <li>Circle gives area and perimeter of a circle</li>
+                <li>Square gives area and perimeter of a square</li>
+                <li>Rectangle gives area and perimeter of a rectangle</li>
+                <li>Triangle gives area and perimeter of a triangle</li>
+            </ol>
+        </div>
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+        <div class="code">
+            <button class="save_button">  Save  </button>
+            <pre>
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("1. Area of Square.");
+
+        System.out.println("2. Area of a Rectangle.");
+
+        System.out.println("3. Area of a circle.");
+
+        System.out.print("\nEnter your choice: ");
+
+        switch(sc.nextInt()){
+
+            case 1:
+
+                System.out.print("Enter side length: ");
+
+                double s=sc.nextDouble();
+
+                s*=s;
+
+                System.out.println("Area of the Square is: "+s);
+
+                break;
+
+            case 2:
+
+                System.out.print("Enter length of rectangle: ");
+
+                double l=sc.nextDouble();
+
+                System.out.print("Enter breadth of rectangle: ");
+
+                double b=sc.nextDouble();
+
+                System.out.println("Area of the rectangle is: "+l*b);
+
+                break;
+
+            case 3:
+
+                System.out.print("Enter radius of the circle: ");
+
+                double rad=sc.nextDouble();
+
+                double ar=Math.PI*rad*rad;
+
+                System.out.println("Area of the circle is: "+ar);
+
+                break;
+
+            default: 
+            
+                System.out.println("Invalid Choice.");
+
+        }
+
+        sc.close();
+
+    }
+
+}
+
+
+            </pre>
+            <button class="download_button"><i class="fa fa-download"></i> Download</button>
+        </div>
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+            <pre>
+1. Area of Square.
+2. Area of a Rectangle.
+3. Area of a circle.
+
+Enter your choice: 1
+Enter side length: 8
+Area of the Square is: 64.0
+
+1. Area of Square.
+2. Area of a Rectangle.
+3. Area of a circle.
+
+Enter your choice: 2
+Enter length of rectangle: 5
+Enter breadth of rectangle: 6
+Area of the rectangle is: 30.0
+
+1. Area of Square.
+2. Area of a Rectangle.
+3. Area of a circle.
+
+Enter your choice: 2
+Enter length of rectangle: 5
+Enter breadth of rectangle: 6
+Area of the rectangle is: 30.0
+ </pre>
+    </div>
+        <a class="button" href = "/c/menudriven_c.html" target="_main">See the same program in C</a>
+        <a class="button" href = "/python/menudriven_py.html" target="_main">See the same program in Python</a>       
+    </main>
+</body>
+</html>

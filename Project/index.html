@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/index.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>CodersZone</title>
+</head>
+<body>
+    <header>       
+         <center>
+                <a href = "/index.html">
+                <img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px">
+                </a>
+         </center>
+         <a class="dash-button" href = "/practice.html">My Dashboard</a>
+         <button class="open-button" onclick="open_sign_up_Form()">Sign Up</button>
+            <div class="sign_up_form" id="sign_up_form">
+                <form action="/action.php">
+                   <fieldset>
+                       <legend align="center">Sign up</legend>
+                       <p>Name : <input type="text" name="name" placeholder="enter name" required></p>
+                       <p>Password : <input type="password" placeholder="enter password" required></p>
+                       <p>Select gender : 
+                           <label for="male"> 
+                               <input type="radio" value="male" name="gender" id="male">male
+                           </label>
+                           <label for="female">
+                               <input type="radio" value="female" name="gender" id="female">female
+                           </label>
+                       </p>
+                       <p>Select your interest :
+                           <label for="c">
+                               <input type="checkbox" value="c" name="language" id="c">c
+                           </label>
+                           <label for="python">
+                               <input type="checkbox" value="python" name="language" id="python">python
+                           </label>
+                           <label for="java">
+                               <input type="checkbox" value="java" name="language" id="java">java
+                           </label>
+                       </p>
+                       <p>Email: <input type="email" name="email" placeholder="abc@gmail.com" id="email"></p>
+                       <p>Select your level
+                           <select name="level">
+                               <option value="">--Select your level--</option>
+                               <option value="beginner">beginner</option>
+                               <option value="advanced">advanced</option>
+                               <option value="pro">pro</option>
+                           </select>
+                       </p>
+                       <textarea name="About you " id="About you" placeholder="Tell us something about yourself" rows="3"></textarea>
+                       <br>
+                       <input type="submit" value="submit">
+                       <button type="button" class="closeForm" onclick="close_sign_up_Form()">Close Form</button>
+                   </fieldset>
+               </form>
+               </div>
+         <button class="open-button" onclick="open_sign_in_Form()">Sign In</button>
+                <div class="sign_in_form" id="sign_in_form">
+                    <form action="/action.php">
+                        <fieldset>
+                            <legend align="center">Sign in</legend>
+                            <p>Name : <input type="text" name="name" placeholder="enter name" required></p>
+                            <p>Password : <input type="password" placeholder="enter password" required></p>
+                            <input type="submit" value="submit">
+                            <button type="button" class="closeForm" onclick="close_sign_in_Form()">Close Form</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <script>
+                     function open_sign_up_Form() {
+                       document.getElementById("sign_up_form").style.display = "block";
+                    }                
+                    function close_sign_up_Form() {
+                      document.getElementById("sign_up_form").style.display = "none";
+                   }
+                    function open_sign_in_Form() {
+                      document.getElementById("sign_in_form").style.display = "block";
+                    }                
+                    function close_sign_in_Form() {
+                      document.getElementById("sign_in_form").style.display = "none";
+                    }
+              </script>
+        
+    </header>
+    <main>
+        <hr color="#C29DD5">
+        <br><br>
+            <div class="c">
+                <center>
+                <a href = "/c_prog_list.html" ><img src ="C_Logo.png" alt = "C logo" height="100"></a>
+                <br>
+                <br>
+                <a class="prog_list_button" href = "/c_prog_list.html">C Program Codes</a>
+                </center>
+            </div><br><br>
+            <div class="java">
+                <center>
+                <a href = "/j_prog_list.html"><img src ="Java.png" alt = "Java logo" height="100"></a>
+                <br>
+                <br>
+                <a class="prog_list_button" href = "/j_prog_list.html">Java Program Codes</a>
+            </center>
+            </div><br><br>
+            <div class="python">
+                <center>
+                <a href = "/py_prog_list.html"><img src ="python.jpg" alt = "Python logo" height="100"></a>
+                <br>
+                <br>
+                <a class="prog_list_button" href = "/py_prog_list.html">Python Program Codes</a>
+            </center>
+            </div>
+        
+    </main>
+
+    <footer>
+        <div class="foot">
+                <marquee direction="left" scrollamount="7">
+                    <center>
+                        Thanking you for visiting our website!<br>
+                        Your one stop destination for all coding needs.
+                    </center>
+                </marquee>
+        </div>
+    </footer>
+</body>
+</html>

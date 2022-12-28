@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Duck Number in java</title>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <center>
+                <a href = "/index.html">
+                    <img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px">
+                </a>
+            </center>
+        </div>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+        <div class="top">
+            <h3>Duck Number</h3>
+        </div>
+        <div class="explaination">
+            Duck number is another special positive non-zero number that contains zero in it. The digit zero should not be presented at the starting of the number. Zero can be present at any of the positions except the beginning of the number.
+           <br><br>Let's understand some examples of Duck numbers.
+           <br>
+           <br>
+           1.	3210 is a Duck number because it contains zero at the end of the number but not present at the beginning of it.<br>
+           2.	08237 is not a Duck number because it contains zero at the beginning of it.<br>
+           3.	7033 is a Duck number because it contains zero at the second position, not at the beginning.<br>
+           4.	030405 is not a Duck number because it also contains zero in starting of the number.<br>
+           5.	00153 is also not a Duck number because it contains leading zeros.<br>
+        </div>
+        <h2>Algorithm</h2>
+        <div class="algorithm">
+            <ol type="1.">
+                <li>We first take a number</li>
+                <li>We then find the last digit of the number.</li>
+                <li>If the last digit is zero, it is a Duck number.</li>
+                <li>Otherwise, we remove that digit from the number.</li>
+                <li>Perform steps 2, 3, and 4 until the number becomes zero.</li>
+            </ol>
+        </div>
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+        <div class="code">
+            <button class="save_button">  Save  </button>
+            <pre>
+	//import required classes and packages  
+	import java.util.*;   
+	import java.io.*;   
+	import java.util.Scanner;  
+	  
+	//create DuckNumberExample class to check whether the given number is a Duck number or not  
+	public class DuckNumberExample {  
+	  
+	   // create checkNumber() method that returns true when it founds number Buzz   
+	   public static boolean checkNumber(int number) {  
+	  
+	      // use loop to repeat steps  
+	      while(number != 0) {  
+	  
+	         // check whether the last digit of the number is zero or not  
+	         if(number%10 == 0)  
+	            return true;    //return true if the number is Duck  
+	  
+	         // divide the number by 10 to remove the last digit  
+	         number = number / 10;  
+	      }  
+	  
+	      return false; //return false if the number is not Duck  
+	   }  
+	       // main() method start  
+	    public static void main(String args[])   
+	    {     
+            int n1, n2;  
+	          
+	        //create scanner class object to get input from user  
+	        Scanner sc=new Scanner(System.in);  
+	          
+	        //show custom message  
+	        System.out.println("Enter first number");  
+	          
+	        //store user entered value into variable n1  
+	        n1 = sc.nextInt();  
+	          
+	        //show custom message  
+	        System.out.println("Enter second number");  
+	          
+	        //store user entered value into variable n2  
+	        n2 = sc.nextInt();  
+	          
+	        if (checkNumber(n1))   
+	            System.out.println(n1 + " is a Duck number");   
+	        else  
+	            System.out.println(n1 + " is not a Duck number");   
+	        if (checkNumber(n2))   
+	            System.out.println(n2 + " is a Duck number");   
+	        else  
+	            System.out.println(n2 + " is not a Duck number");   
+	    }  
+	}  
+
+            </pre>
+            <button class="download_button"><i class="fa fa-download"></i> Download</button>
+        </div>
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+            <pre>
+Enter first number 
+00432
+Enter second number
+0340240
+432 is not a Duck number
+340240 is a Duck number
+
+ </pre>
+    </div>
+        <a class="button" href = "/c/duck_c.html" target="_main">See the same program in C</a>
+        <a class="button" href = "/python/duck_py.html" target="_main">See the same program in Python</a>       
+    </main>
+</body>
+</html>

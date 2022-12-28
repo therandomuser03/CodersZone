@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(6, 8, 34);
+}
+
+.head{
+    padding: 0px;
+    text-align: center;
+    height: 150px;
+    background-color: #C29DD5;
+    color: azure;
+    font-family: Century Gothic;
+}
+
+.top{
+    height: 60px;
+    padding: 50px;
+    color: rgb(228, 205, 234);
+}
+
+.list{
+    padding: 20px;
+    color: rgb(228, 205, 234);
+}
+
+a:link {
+    font-size: large;
+    color: rgb(228, 205, 234);
+    text-decoration: none;
+}
+
+a:visited {
+    font-size: large;
+    color: rgb(228, 205, 234);
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: large;
+    color: rgb(107, 216, 226);
+    text-decoration: none;
+  }
+
+a:active {
+    font-size: large;
+    color: rgb(216, 121, 221);
+    text-decoration: none;
+}

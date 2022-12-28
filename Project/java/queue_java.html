@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <title>Queue in Java</title>
+</head>
+<body>
+    <header>
+            <center>
+                <a href = "/index.html"><img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px"></a>
+            </center>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+            <h1 align="center">Queue</h1>
+        <div class="explaination">
+            A queue is a useful data structure in programming. It is similar to the ticket queue outside a cinema hall, where the first person entering the queue is the first person who gets the ticket.
+           <br><br> Queue follows the First In First Out (FIFO) rule - the item that goes in first is the item that comes out first.
+           <br><br>In programming terms, putting items in the queue is called enqueue, and removing items from the queue is called dequeue.
+           <br>A queue is an object (an abstract data structure - ADT) that allows the following operations:
+           <br><br>
+           <b>Enqueue</b>- Add an element to the end of the queue<br>
+           <b>Dequeue</b>- Remove an element from the front of the queue<br>
+           <b>IsEmpty</b>- Check if the queue is empty<br>
+           <b>IsFull</b>- Check if the queue is full<br>
+           <b>Peek</b>- Get the value of the front of the queue without removing it<br>
+         </div>
+        </div>
+        <h2>Algorithm</h2>
+        <div class="algorithm">
+            <ol type="A.">
+                <h3>Enqueue Operation Algorithm</h3>
+                <ol type="1.">
+                    <li>check if the queue is full</li>
+                    <li>for the first element, set the value of FRONT to 0</li>
+                    <li>increase the REAR index by 1</li>
+                    <li>add the new element in the position pointed to by REAR</li>
+                    <li>Returns success.</li>
+                </ol>
+                <h3>Dequeue Operation Algorithm</h3>
+                <ol type="1.">
+                    <li>check if the queue is empty</li>
+                    <li>return the value pointed by FRONT</li>
+                    <li>increase the FRONT index by 1</li>
+                    <li>for the last element, reset the values of FRONT and REAR to -1</li>
+                    <li>Returns success.</li>
+                </ol>
+            </ol>
+        </div>
+
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+
+        <div class="code">
+            <pre>
+public class Queue {
+    int SIZE = 5;
+    int items[] = new int[SIZE];
+    int front, rear;
+
+    Queue() {
+        front = -1;
+        rear = -1;
+    }
+
+    // check if the queue is full
+    boolean isFull() {
+        if (front == 0 && rear == SIZE - 1) {
+            return true;
+        }  
+        return false;
+    }
+
+    // check if the queue is empty
+    boolean isEmpty() {
+        if (front == -1)
+            return true;
+        else
+            return false;
+    }
+
+    // insert elements to the queue
+    void enQueue(int element) {
+
+        // if queue is full
+        if (isFull()) {
+            System.out.println("Queue is full");
+        }
+        else {
+            if (front == -1) {
+                // mark front denote first element of queue
+                front = 0;
+        }
+
+        rear++;
+
+        // insert element at the rear
+        items[rear] = element;
+        System.out.println("Insert " + element);
+    }
+
+    // delete element from the queue
+    int deQueue() {
+        int element;
+
+        // if queue is empty
+        if (isEmpty()) {
+            System.out.println("Queue is empty");
+            return (-1);
+        }
+        else {
+            // remove element from the front of queue
+            element = items[front];
+
+            // if the queue has only one element
+            if (front >= rear) {
+                front = -1;
+                rear = -1;
+            }
+
+            else {
+                // mark next element as the front
+                front++;
+            }
+            System.out.println( element + " Deleted");
+            return (element);
+        }
+    }
+
+    // display element of the queue
+    void display() {
+        int i;
+        if (isEmpty()) {
+            System.out.println("Empty Queue");
+        }
+
+        else {
+            // display the front of the queue
+            System.out.println("\nFront index-> " + front);
+
+            // display element of the queue
+            System.out.println("Items -> ");
+            for (i = front; i <= rear; i++)
+                System.out.print(items[i] + "  ");
+
+            // display the rear of the queue
+            System.out.println("\nRear index-> " + rear);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        // create an object of Queue class
+        Queue q = new Queue();
+
+        // try to delete element from the queue
+        // currently queue is empty
+        // so deletion is not possible
+        q.deQueue();
+
+        // insert elements to the queue
+        for(int i = 1; i < 6; i ++) {
+            q.enQueue(i);
+        }
+
+        // 6th element can't be added to queue because queue is full
+        q.enQueue(6);
+
+        q.display();
+
+        // deQueue removes element entered first i.e. 1
+        q.deQueue();
+
+        // Now we have just 4 elements
+        q.display();
+
+    }
+}                   
+            </pre>
+        </div>
+
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+            <pre>
+Queue is empty
+Insert 1
+Insert 2
+Insert 3
+Insert 4
+Insert 5
+Queue is full
+
+Front index-> 0
+Items ->
+1  2  3  4  5  
+Rear index-> 4
+1 Deleted
+
+Front index-> 1
+Items ->
+2  3  4  5
+Rear index-> 4
+ </pre>
+        </div>
+        <a class="button" href = "/c/queue_c.html" target="_main">See the same program in C</a>
+        <a class="button" href = "/python/queue_py.html" target="_main">See the same program in Python</a>   
+    </main>
+</body>
+</html>

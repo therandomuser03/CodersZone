@@ -1,0 +1,65 @@
+INNOVATIVE PROJECT - Educational Website 
+
+Characteristics of the website :-
+1. Code snippets (in C, Python, Java)
+2. Explanation of the code
+3. Output of the code
+4. (more if time permits...)
+
+Needed languages for developement :-
+1. HTML* 
+3. CSS*
+4. Python
+5. Java
+6. C
+
+list of programs :- (all the programs should be done using functions or methods)
+1. armstrong number
+2. palindrome number
+3. stack
+4. queue
+5. duck number
+6. magic number
+7. menu driven calculator- add,subtract,divide,multiply,power,root of any power
+
+8. menu driven shape dimensions (both 2d and 3d shapes)- 
+            2d- area and perimeter of each shape- square, rectangle, circle, tringle
+            3d- volume, total surface area and curved surface area of each shape- sphere, hemi-sphere, cube, cuboide, cylinder, cone
+
+9. menu driven code convertor - binary to decimal and vice versa
+                                binary to hexa and vice versa
+                                binary to octal and vice versa
+                                decimal to hexa and vice versa
+                                decimal to octal and vice versa
+                                octal to hexa and vice versa
+
+10. Patern printing - (number of rows and column should be user entered)
+~  1
+   1 2
+   1 2 3
+   1 2 3 4
+
+~   1 2 3 4
+   1 2 3
+   1 2
+   1
+
+~   1
+   2 3
+   4 5 6
+   7 8 9 10
+
+~   1
+   2 2
+   3 3 3
+   4 4 4 4
+   
+~       *
+      * * *
+    * * * * *
+  * * * * * * *
+
+~  * * * * * * *
+    * * * * *
+      * * *
+        *

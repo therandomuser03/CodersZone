@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Magic Number in java</title>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <center>
+                <a href = "/index.html">
+                    <img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px">
+                </a>
+            </center>
+        </div>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+        <div class="top">
+            <h3>Magic Number</h3>
+        </div>
+        <div class="explaination">
+            When the sum of all the given digits of a number and the reverse of that sum is multiplied, which is equal to the original number, and then the number is called a magic number.
+           <br> For example, suppose we have a 1729 number and we need to validate whether the number is a magic number or not. So, first we need to get the sum of all digits of the number which is 19 (1 + 7 + 2 + 9 = 19). Reverse the sum of the number is 91, and then get the product of the sum of original digits with the reverse of that sum as 19 * 19 = 1729. So, it is the magic number.
+        </div>
+        <h2>Algorithm</h2>
+        <div class="algorithm">
+            <ol type="1.">
+                <li>Declare an integer type variable and input a number from the user to store it in N.</li>
+                <li>Get the sum of all digits of the original number and store it another variable A.</li>
+                <li>Reverse the number of variable A and store into B.</li>
+                <li>After that, multiply the values of variable A and B and store into C.</li>
+                <li>Check whether C == N, then the number is a Magic Number. </li>
+                <li>Else, the Number is not a Magic number.</li>
+            </ol>
+        </div>
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+        <div class="code">
+            <button class="save_button">  Save  </button>
+            <pre>
+    import java.util.Scanner;  
+
+	public class MagicNumberExample2  {  
+	    public static void main(String args[])  {  
+	        Scanner scanner = new Scanner(System.in);      
+	        System.out.print("Enter any number to check: ");  
+	
+            //reading an iteger from the user  
+	        int number = scanner.nextInt();  
+	     
+            if(magicNumber(number))  
+	            System.out.println(number +" is a magic number.");  
+	        else  
+	            System.out.println(number +" is not a magic number.");  
+	    }  
+	
+        //user-defined method to check the number is magic or not  
+	    public static boolean magicNumber(int number)  {  
+	        if( ((number - 1) % 9) == 0)  
+	            return true;  
+	        else  
+	            return false;  
+	    }  
+	}  
+
+            </pre>
+            <button class="download_button"><i class="fa fa-download"></i> Download</button>
+        </div>
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+            <pre>
+Enter any number to check: 73
+73 is a magic number.
+
+ </pre>
+    </div>
+        <a class="button" href = "/c/magic_c.html" target="_main">See the same program in C</a>
+        <a class="button" href = "/python/magic_py.html" target="_main">See the same program in Python</a>       
+    </main>
+</body>
+</html>

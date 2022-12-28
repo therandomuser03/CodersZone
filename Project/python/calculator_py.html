@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Calculator in Python</title>
+</head>
+<body>
+    <header>
+            <center>
+                <a href = "/index.html"><img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px"></a>
+            </center>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+            <h1 align="center">Calculator</h1>
+        <div class="explaination">
+            Create a simple calculator which can perform basic arithmetic operations like addition, subtraction, multiplication, or division depending upon the user input. 
+        <br>Approach :
+ <br>   •	User chooses the desired operation. Options 1, 2, 3, and 4 are valid.
+ <br>   •	Two numbers are taken and an if…elif…else branching is used to execute a particular section.
+ <br>   •	Using functions add(), subtract(), multiply() and divide() evaluate respective operations.
+
+         </div>
+        </div>
+       
+       
+
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+
+        <div class="code">
+            <button class="save_button">  Save  </button>
+            <pre>
+                # Function to add two numbers
+                def add(num1, num2):
+                    return num1 + num2
+                
+                # Function to subtract two numbers
+                def subtract(num1, num2):
+                    return num1 - num2
+                
+                # Function to multiply two numbers
+                def multiply(num1, num2):
+                    return num1 * num2
+                
+                # Function to divide two numbers
+                def divide(num1, num2):
+                    return num1 / num2
+                
+                print("Please select operation -\n" \
+                        "1. Add\n" \
+                        "2. Subtract\n" \
+                        "3. Multiply\n" \
+                        "4. Divide\n")
+                
+                
+                # Take input from the user
+                select = int(input("Select operations form 1, 2, 3, 4 :"))
+                
+                number_1 = int(input("Enter first number: "))
+                number_2 = int(input("Enter second number: "))
+                
+                if select == 1:
+                    print(number_1, "+", number_2, "=",
+                                    add(number_1, number_2))
+                
+                elif select == 2:
+                    print(number_1, "-", number_2, "=",
+                                    subtract(number_1, number_2))
+                
+                elif select == 3:
+                    print(number_1, "*", number_2, "=",
+                                    multiply(number_1, number_2))
+                
+                elif select == 4:
+                    print(number_1, "/", number_2, "=",
+                                    divide(number_1, number_2))
+                else:
+                    print("Invalid input")
+                 
+            </pre>
+            <button class="download_button"><i class="fa fa-download"></i> Download</button>
+        </div>
+
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+            <pre>
+                Please select operation -
+                1. Add
+                2. Subtract
+                3. Multiply
+                4. Divide
+                Select operations form 1, 2, 3, 4 : 1
+                Enter first number : 15
+                Enter second number : 14
+                15 + 14 = 29
+                
+ </pre>
+
+        </div>
+        <a class="button" href = "/java/calculator_java.html" target="_main">See the same program in Java</a>
+        <a class="button" href = "/c/calcualtor_c.html" target="_main">See the same program in C</a>
+    </main>
+</body>
+</html>

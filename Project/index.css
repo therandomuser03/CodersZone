@@ -1,0 +1,119 @@
+body{
+    background-color: rgb(6, 8, 34);
+}
+.name{
+    text-align: center;
+}
+
+header{
+    padding: 0px;
+    text-align: center;
+    height: 150px;
+    background-color: #C29DD5;
+    color: azure;
+    font-family: Century Gothic;
+}
+
+.dash-button{
+    background-color: rgb(16, 16, 90);
+    color: white;
+    font-size: larger;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    float: left;
+    text-decoration: none;
+    bottom: 23px;
+    right: 28px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.dash-button:hover{
+    background-color: rgb(151, 148, 244);
+    color: rgb(41, 13, 63);
+}
+
+.open-button {
+    background-color: rgb(16, 16, 90);
+    color: white;
+    font-size: larger;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    bottom: 23px;
+    right: 28px;
+    width: 150px;
+    border-radius: 5px;
+}
+.open-button:hover{
+    background-color: rgb(151, 148, 244);
+    color: rgb(41, 13, 63);
+}
+.sign_up_form , .sign_in_form{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 9;
+    width: fit-content;
+    cursor: pointer;
+    background-color:purple;
+    color: white;
+    padding: 8px 27px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none !important;
+    margin-right: 20px;
+    border: 0px;
+    float: right;
+}
+
+.prog_list_button{
+    cursor: pointer;
+    outline: 0px;
+    background-color: rgb(125, 134, 217);
+    color: white;
+    font-family: var(--font-sofia);
+    text-decoration: none;
+    padding: 8px 27px;
+    border-radius: 5px;
+    font-size: x-large;
+    margin-right: 20px;
+    border: 0px;
+    white-space: nowrap;
+}
+
+.prog_list_button:hover {
+    background-color: rgb(90, 49, 148);
+    color: rgb(202, 202, 210);
+}
+
+.java ,.python , .c{
+    align-items: center;
+    padding: 50px;
+    display: inline;
+    text-align: center;
+    height: 150px;
+    color: black;
+    vertical-align: middle;
+    }
+
+
+
+.foot{
+    padding: 3px;
+    height: 100px;
+    background-color: rgba(23, 21, 34, 0.774);
+    color: azure;
+    align-items: center;
+}
+
+marquee{
+    padding: 30px;
+    width: "70%";
+    height: "200px";
+    font-size: x-large;
+    
+}

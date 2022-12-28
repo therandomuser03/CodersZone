@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Menu driven program in python</title>
+</head>
+<body>
+    <header>
+            <center>
+                <a href = "/index.html"><img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px"></a>
+            </center>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+            <h1 align="center">Menu driven program in python</h1>
+        <div class="explaination">
+            Menu-driven program in C is a type of program in which various options are provided to the user and some functionality is provided based on these options. These programs are used to provide a simple yet effective user interface and deliver the requested functionalities to the user. This article provides an overview of menu-driven programs in C.
+           <br> 
+           <br>This code is an example of a menu driven program that calculates the area and perimeter of shapes like:  
+           <br>
+           <br>Square
+           <br>Rectangle
+           <br>Triangle
+           <br>Circle
+         </div>
+        </div>
+        <h2>Algorithm</h2>
+        <div class="algorithm">
+            <ol type="1.">
+                <li>The driver program contains switch case that lets us choose an operation</li>
+                <li>Circle gives area and perimeter of a circle</li>
+                <li>Square gives area and perimeter of a square</li>
+                <li>Rectangle gives area and perimeter of a rectangle</li>
+                <li>Triangle gives area and perimeter of a triangle</li>
+            </ol>
+        </div>
+
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+
+        <div class="code">
+            <button class="save_button">  Save  </button>
+    <pre>
+#include <stdio.h>
+#include <stdlib.h>
+ 
+void main()
+{
+    int fig_code;
+    float a, b, c, side, base, length, width, breadth, height, area, perimeter, radius;
+    do{
+        printf("\n-------------------------\n");
+        printf(" 1 --> Circle\n");
+        printf(" 2 --> Rectangle\n");
+        printf(" 3 --> Triangle\n");
+        printf(" 4 --> Square\n");
+        printf(" 0 --> Exit\n");
+        printf("-------------------------\n");
+        printf("Enter the Figure code\n");
+        scanf("%d", &fig_code);
+        switch(fig_code){
+            
+            case 1:
+                printf("Enter the radius\n");
+                scanf("%f", &radius);
+                area = 3.142 * radius * radius;
+        
+                printf("Area of a circle = %f\n", area);
+                perimeter = 2 * (22 / 7) * radius;
+                printf("Perimeter of circle is: %.3f", perimeter);
+                break;
+        
+            case 2:
+                printf("Enter the breadth and length\n");
+                scanf("%f %f", &breadth, &length);
+                area = breadth * length;
+                printf("Area of a Rectangle = %f\n", area);
+               
+                perimeter = 2 * (width + length);
+                printf("Perimeter of rectangle is: %.3f", perimeter);
+                break;
+        
+            case 3:
+                printf("Enter the base and height\n");
+                scanf("%f %f", &base, &height);
+                area = 0.5 * base * height;
+                printf("Area of a Triangle = %f\n", area);
+        
+                printf("\n Enter the size of all sides of the triangle : ");
+                scanf("%f%f%f", &a, &b, &c);
+                perimeter = a + b + c;
+                printf("Perimeter of triangle is: %.3f", perimeter);
+                break;
+        
+            case 4:
+                printf("Enter the side\n");
+                scanf("%f", &side);
+                area = side * side;
+                printf("Area of a Square=%f\n", area);
+        
+                perimeter = 4 * side;
+                printf("Perimeter of a Square=%f\n", perimeter);
+                break;
+        
+            case 0:
+                printf (" You chose: Exit");  
+                exit(0);   
+                break;
+
+            default:
+                printf("Error in figure code\n");
+                break;
+        }   
+        
+    }while (fig_code != 0);
+}
+
+    </pre>
+            <button class="download_button"><i class="fa fa-download"></i> Download</button>
+        </div>
+
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+            <pre>
+-------------------------
+ 1 --> Circle
+ 2 --> Rectangle
+ 3 --> Triangle
+ 4 --> Square
+ 0 --> Exit
+-------------------------
+Enter the Figure code
+1
+Enter the radius
+5
+Area of a circle = 78.550003
+Perimeter of circle is: 30.000
+-------------------------
+ 1 --> Circle
+ 2 --> Rectangle
+ 3 --> Triangle
+ 4 --> Square
+ 0 --> Exit
+-------------------------
+Enter the Figure code
+2
+Enter the breadth and length
+8
+5
+Area of a Rectangle = 40.000000
+Perimeter of rectangle is: 10.000
+-------------------------
+ 1 --> Circle
+ 2 --> Rectangle
+ 3 --> Triangle
+ 4 --> Square
+ 0 --> Exit
+-------------------------
+Enter the Figure code
+3
+Enter the base and height
+5
+7
+Area of a Triangle = 17.500000
+
+ Enter the size of all sides of the triangle : 5
+7
+8
+Perimeter of triangle is: 20.000
+-------------------------
+ 1 --> Circle
+ 2 --> Rectangle
+ 3 --> Triangle
+ 4 --> Square
+ 0 --> Exit
+-------------------------
+Enter the Figure code
+4
+Enter the side
+7
+Area of a Square=49.000000
+Perimeter of a Square=28.000000
+
+-------------------------
+ 1 --> Circle
+ 2 --> Rectangle
+ 3 --> Triangle
+ 4 --> Square
+ 0 --> Exit
+-------------------------
+Enter the Figure code
+7
+Error in figure code
+
+-------------------------
+ 1 --> Circle
+ 2 --> Rectangle
+ 3 --> Triangle
+ 4 --> Square
+ 0 --> Exit
+-------------------------
+Enter the Figure code
+0
+ You chose: Exit
+ </pre>
+
+        </div>
+        <a class="button" href = "/java/menudriven_java.html" target="_main">See the same program in Java</a>
+        <a class="button" href = "/c/menudriven_c.html" target="_main">See the same program in C</a>
+    </main>
+</body>
+</html>

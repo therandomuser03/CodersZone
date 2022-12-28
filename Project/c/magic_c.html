@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Magic Number in C</title>
+</head>
+<body>
+    <header>
+            <center>
+                <a href = "/index.html"><img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px"></a>
+            </center>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+            <h1 align="center">Magic Number</h1>
+        <div class="explaination">
+            When the sum of all the given digits of a number and the reverse of that sum is multiplied, which is equal to the original number, and then the number is called a magic number.
+           <br> For example, suppose we have a 1729 number and we need to validate whether the number is a magic number or not. So, first we need to get the sum of all digits of the number which is 19 (1 + 7 + 2 + 9 = 19). Reverse the sum of the number is 91, and then get the product of the sum of original digits with the reverse of that sum as 19 * 19 = 1729. So, it is the magic number.
+         </div>
+        </div>
+        <h2>Algorithm</h2>
+        <div class="algorithm">
+            <ol type="1.">
+                <li>Declare an integer type variable and input a number from the user to store it in N.</li>
+                <li>Get the sum of all digits of the original number and store it another variable A.</li>
+                <li>Reverse the number of variable A and store into B.</li>
+                <li>After that, multiply the values of variable A and B and store into C.</li>
+                <li>Check whether C == N, then the number is a Magic Number. </li>
+                <li>Else, the Number is not a Magic number.</li>
+            </ol>
+        </div>
+
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+
+        <div class="code">
+            <button class="save_button">  Save  </button>
+            <pre>
+#include < stdio.h>  
+#include < conio.h>  
+                      
+int main (){  
+                        
+    // declare integer variables  
+    int n, temp, rev = 0, digit, sum_of_digits = 0;  
+                          
+    printf (" Enter a Number: \n");  
+    scanf (" %d", &n);                                                     // get the number  
+                          
+    temp = n;                                                              // assign the number to temp variable  
+                          
+    // use while loop to calculate the sum of digits                      
+    while ( temp > 0){  
+                            
+        // extract digit one by one and store into the sum_of_digits  
+        sum_of_digits = sum_of_digits + temp % 10;                         /* use modulus symbol to get the remainder of each iteration by temp % 10 */  
+        temp = temp / 10;  
+    }  
+                          
+    temp = sum_of_digits;                                                  // assign the sum_of_digits to temp variable  
+    printf (" \n The sum of the digits = %d", temp);  
+                          
+    // get the reverse sum of given digits  
+    while ( temp > 0){  
+        rev = rev * 10 + temp % 10;  
+        temp = temp / 10;  
+    }  
+                          
+    printf (" \n The reverse of the digits = %d", rev);  
+                             
+    printf (" \n The product of %d * %d = %d", sum_of_digits, rev, rev * sum_of_digits); 
+
+    // use if else statement to check the magic number  
+    if ( rev * sum_of_digits == n){  
+        printf (" \n %d is a Magic Number. ", n);  
+    }  
+    else{  
+        printf (" \n %d is not a Magic Number. ", n); 
+    }  
+    
+    return 0;           
+}
+                    
+            </pre>
+            <button class="download_button"><i class="fa fa-download"></i> Download</button>
+        </div>
+
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+            <pre>
+Enter a Number: 
+1729
+                 
+The sum of the digits = 19 
+The reverse of the digits = 91 
+The product of 19 * 91 = 1729 
+1729 is a Magic Number.
+ </pre>
+
+        </div>
+        <a class="button" href = "/java/magic_java.html" target="_main">See the same program in Java</a>
+        <a class="button" href = "/python/magic_py.html" target="_main">See the same program in Python</a>
+    </main>
+</body>
+</html>

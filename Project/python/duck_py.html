@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/code_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Duck Number in Python</title>
+</head>
+<body>
+    <header>
+            <center>
+                <a href = "/index.html"><img src="/CodersZone-1.png" alt="CodersZone logo" width="270px" height="150px"></a>
+            </center>
+    </header>
+    <main>
+        <hr color="#C29DD5">
+            <h1 align="center">Duck Number</h1>
+        <div class="explaination">
+            A Duck number is a positive number which has zeroes present in it, For example 3210, 8050896, 70709 are all Duck numbers.
+        <br> Please note that a numbers with only leading 0s is not considered as Duck Number. 
+        For example, numbers like 035 or 0012 are not considered as Duck Numbers. A number like 01203 is considered as Duck because there is a non-leading 0 present in it.
+        Examples: 
+        <br>Input : 707069 
+        <br>Output : It is a duck number. 
+        <br>Explanation: 707069 does not contains zeros at the beginning.
+        
+        <br>Input : 02364 
+        <br>Output : It is not a duck number. 
+        <br>Explanation: in 02364 there is a zero at the beginning of the number.
+        
+        
+
+         </div>
+        </div>
+        <h2>Algorithm</h2>
+        <div class="algorithm">
+            <ol type="1.">
+                <li>We first take a number</li>
+                <li>We then find the last digit of the number.</li>
+                <li>If the last digit is zero, it is a Duck number.</li>
+                <li>Otherwise, we remove that digit from the number.</li>
+                <li>Perform steps 2, 3, and 4 until the number becomes zero.</li>
+            </ol>
+        </div>
+       
+
+        <span class="topic">
+            <h2>Code</h2>
+        </span>
+
+        <div class="code">
+            <button class="save_button">  Save  </button>
+            <pre>
+                # Python program to check whether a number is Duck Number or not.
+
+                # Function to check whether
+                # the given number is duck number or not.
+                def check_duck(num) :
+                
+                    # Length of the number(number of digits)
+                    n = len(num)
+                    
+                    # Ignore leading 0s
+                    i = 0
+                    while (i < n and num[i] == '0') :
+                        i = i + 1
+                
+                    # Check remaining digits
+                    while (i < n) :
+                        if (num[i] == "0") :
+                            return True
+                        i = i + 1
+                
+                    return False
+                    
+                
+                # Driver Method
+                num1 = "1023"
+                if(check_duck(num1)) :
+                    print "It is a duck number"
+                else :
+                    print "It is not a duck number"
+                
+                 
+            </pre>
+            <button class="download_button"><i class="fa fa-download"></i> Download</button>
+        </div>
+
+        <span class="topic">
+            <h2>Output</h2>
+        </span>
+
+        <div class="output">
+            <pre>
+                It is a duck number
+ </pre>
+
+        </div>
+        <a class="button" href = "/java/duck_java.html" target="_main">See the same program in Java</a>
+        <a class="button" href = "/c/duck_c.html" target="_main">See the same program in C</a>
+    </main>
+</body>
+</html>
