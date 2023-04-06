@@ -6,6 +6,12 @@ CodersZone is a sample educational website created using HTML and CSS. With the 
 
 `Live link` : https://coderszone-sample.netlify.app/
 
-## Screenshots
+## Preview :
 
-![](https://user-images.githubusercontent.com/94695669/230282824-929cec7c-bd2d-4390-a885-1fdee5fc9270.png)
+https://user-images.githubusercontent.com/94695669/230392654-8dd19654-ee3c-496d-9ebe-de9be1f1f1c4.mp4
+
+### Features :
+
+- C Program Codes
+- Java Program Codes
+- Python Program Codes
