@@ -18,5 +18,5 @@ https://user-images.githubusercontent.com/94695669/230392654-8dd19654-ee3c-496d-
 
 ### Features :
 
-- You can create an account and can save their desired codes in their personal dashboard.
-- You can even download the codes.
+- You can create an account and can save your desired codes in your personal dashboard.
+- You can even download the codes without creating an account.
